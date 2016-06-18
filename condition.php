@@ -1,8 +1,13 @@
 <?php
+// Get variable from JavaScript
+$latitude = $_GET['lat'];
+$longitude = $_GET['lon'];
 // initialize cURL session
 $curl = curl_init();
+
+$url = "https://api.forecast.io/forecast/92bf02fc6a88fc430e4524398f5c22d7/".$latitude.",".$longitude;
 // set URL to load
-curl_setopt($curl, CURLOPT_URL, "https://api.nasa.gov/planetary/apod?api_key=ZOZdurgHfGeKk5YfonufJQs2yBOR7Sapcb4YHJ7f&hd=True");
+curl_setopt($curl, CURLOPT_URL, $url);
 // Don't print (yet)
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 // retrieve the URL and assign to variable as a string

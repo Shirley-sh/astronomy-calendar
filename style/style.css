@@ -37,10 +37,10 @@ body{
     position: absolute;
     margin: 0;
     padding: 0;
-    background: white no-repeat center center fixed;
+    background: black no-repeat center center fixed;
     background-size: cover;
-    color: white;
     font-family: Abel,sans-serif;
+    color: white;
 
 }
 #background{
@@ -130,6 +130,11 @@ body{
     margin-top: 10px;
 }
 
+hr{
+    border: 0;
+    height: 1px;
+    background: #fff;
+}
 
 footer{
     width: 100%;
