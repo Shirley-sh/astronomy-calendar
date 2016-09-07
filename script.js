@@ -30,21 +30,21 @@ function getCondition(latitude,longitude) {
             var humidity;
             var dewPoint = current.dewPoint;
             if (dewPoint < 50) {
-                humidity = current.humidity * 100 + '% ' + "Severely high.";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Severely high.";
             } else if (dewPoint < 54) {
-                humidity = current.humidity * 100 + '% ' + "Extremely uncomfortable, fairly oppressive";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Extremely uncomfortable, fairly oppressive";
             } else if (dewPoint < 59) {
-                humidity = current.humidity * 100 + '% ' + "Very humid, quite uncomfortable";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Very humid, quite uncomfortable";
             } else if (dewPoint < 64) {
-                humidity = current.humidity * 100 + '% ' + "Somewhat uncomfortable for most people at upper edge";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Somewhat uncomfortable for most people at upper edge";
             } else if (dewPoint < 69) {
-                humidity = current.humidity * 100 + '% ' + "OK for most, but all perceive the humidity at upper edge";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "OK for most, but all perceive the humidity at upper edge";
             } else if (dewPoint < 74) {
-                humidity = current.humidity * 100 + '% ' + "Comfortable";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Comfortable";
             } else if (dewPoint < 80) {
-                humidity = current.humidity * 100 + '% ' + "Very comfortable";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "Very comfortable";
             } else {
-                humidity = current.humidity * 100 + '% ' + "A bit dry for some";
+                humidity = (current.humidity * 100).toFixed() + '% ' + "A bit dry for some";
             }
 
             var moonText;
